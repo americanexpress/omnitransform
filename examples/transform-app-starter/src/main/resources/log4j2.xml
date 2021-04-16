@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Properties>
+        <Property name="log-path">./src/test/resources/logs</Property>
+        <Property name="omnitransform-log-name">omnitransform-log-info</Property>
+        <Property name="omnitransformapp-log-name">omnitransformapp-log-info</Property>
+        <Property name="archive">${log-path}/archive</Property>
+        <Property name="retentionAge">30d</Property>
+    </Properties>
+    <Appenders>
+        <RollingFile name="info-image" fileName="${log-path}/${omnitransform-log-name}.log"
+                     filePattern="${archive}/${omnitransform-log-name}-%d{yyyy-MM-dd}.log"
+                     filePermissions="rwxrwxrwx">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L (%t) - %m%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+            <DefaultRolloverStrategy>
+                <Delete basePath="${archive}" maxDepth="1">
+                    <IfFileName glob="${omnitransform-log-name}*.log*" />
+                    <IfLastModified age="${retentionAge}" />
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+        <RollingFile name="app-image" fileName="${log-path}/${omnitransformapp-log-name}.log"
+                     filePattern="${archive}/${omnitransformapp-log-name}-%d{yyyy-MM-dd}.log"
+                     filePermissions="rwxrwxrwx">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L (%t) - %m%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+            <DefaultRolloverStrategy>
+                <Delete basePath="${archive}" maxDepth="1">
+                    <IfFileName glob="${omnitransformapp-log-name}*.log*" />
+                    <IfLastModified age="${retentionAge}" />
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Logger name="com.americanexpress.omnitransform.exceptions" level="INFO" additivity="false">
+            <appender-ref ref="info-image"/>
+        </Logger>
+        <Logger name="com.americanexpress.omnitransform.processor" level="INFO" additivity="false">
+            <appender-ref ref="app-image"/>
+        </Logger>
+        <Root level="INFO">
+            <AppenderRef ref="info-image" level="INFO"/>
+            <AppenderRef ref="app-image" level="INFO"/>
+        </Root>
+    </Loggers>
+</Configuration>

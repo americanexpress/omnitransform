@@ -1,0 +1,42 @@
+{
+	"input": [
+		{
+			"id": "product",
+			"inputType": "J",
+			"inputFilePath": "./src/test/resources/sample.json",
+			"inputSchemaFilePath": "",
+			"streamName": "description",
+			"processor": "default",
+			"unit": "file",
+			"additionalProperties":{"init.spark.app.name":"sample"}
+		}
+	],
+	"transform": [
+		{
+			"id": "salesDs",
+			"dependentIds": [],
+			"transformCondition": "select *, column_to_json(firstName, 'column'), row_to_json(struct(firstName), 'row'), struct_join_to_json(array(struct(firstName)), 'struct') from product_description",
+			"dropColumns": [
+			],
+			"processor": "default",
+						"additionalProperties":{"udf":["com.americanexpress.omnitransform.udf.JsonUDF"]}			
+		}
+	],
+	"output": [
+		{
+			"id": "fileOut",
+			"outputType": "J",
+			"saveMode": "Append",
+			"outputFilePath": "./src/test/resources/sales",
+			"outputSchemaFilePath": "",
+			"dependentIds": [
+				"salesDs"
+			],
+			"outputPartitionKeys": [
+			],
+			"processor": "default",
+						"additionalProperties":{"init.spark.app.name":"sample"}
+			
+		}
+	]
+}

@@ -1,0 +1,38 @@
+{
+	"input": [
+		{
+			"id": "product",
+			"inputType": "J",
+			"inputFilePath": "./src/test/resources/jsonTest",
+			"inputSchemaFilePath": "",
+			"streamName": "description",
+			"processor": "default",
+			"unit": "file"
+		}
+	],
+	"transform": [
+		{
+			"id": "salesDs",
+			"dependentIds": [],
+			"transformCondition": "select * from product_description",
+			"dropColumns": [
+			],
+			"processor": "default"
+		}
+	],
+	"output": [
+		{
+			"id": "fileOut",
+			"outputType": "J",
+			"saveMode": "Append",
+			"outputFilePath": "./src/test/resources/sales",
+			"outputSchemaFilePath": "",
+			"dependentIds": [
+				"salesDs"
+			],
+			"outputPartitionKeys": [
+			],
+			"processor": "default"
+		}
+	]
+}

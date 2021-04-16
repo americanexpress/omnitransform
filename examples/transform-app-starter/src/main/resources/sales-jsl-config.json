@@ -1,0 +1,49 @@
+{
+	"input": [
+		{
+			"id": "product",
+			"inputType": "J",
+			"inputFilePath": "./src/test/resources/product.json",
+			"inputSchemaFilePath": "",
+			"streamName": "description",
+			"processor": "com.americanexpress.omnitransform.processor.InputProcessor",
+			"unit": "file"
+		},
+		{
+			"id": "salesList",
+			"inputType": "F",
+			"inputFilePath": "./src/test/resources/sales",
+			"inputSchemaFilePath": "./src/main/resources/schema.xml",
+			"streamName": "sales",
+			"processor": "com.americanexpress.omnitransform.processor.InputProcessor",
+			"unit": "file"
+		}
+	],
+	"transform": [
+		{
+			"id": "salesDs",
+			"dependentIds": [],
+			"transformCondition": "select * from salesList_item A left outer join product_description B ON A.product_id=B.prd_id",
+			"dropColumns": [
+				"prd_id"
+			],
+			"processor": "com.americanexpress.omnitransform.processor.TransformationProcessor"
+		}
+	],
+	"output": [
+		{
+			"id": "fileOut",
+			"outputType": "P",
+			"saveMode": "Append",
+			"outputFilePath": "./src/test/resources/output",
+			"outputSchemaFilePath": "",
+			"dependentIds": [
+				"salesDs"
+			],
+			"outputPartitionKeys": [
+				"product_name"
+			],
+			"processor": "default"
+		}
+	]
+}

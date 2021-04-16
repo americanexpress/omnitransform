@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beanio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.beanio.org/2012/03"
+  xsi:schemaLocation="http://www.beanio.org/2012/03
+http://www.beanio.org/2012/03/mapping.xsd">
+
+    <stream name="sales" format="fixedlength">
+
+        <record name="item" minOccurs="0" class="map">
+            <field default="00" length="2" name="product_id"/>
+            <field name="first_name" length="10"/>
+            <field name="last_name" length="10"/>
+        </record>
+
+    </stream>
+
+</beanio>
