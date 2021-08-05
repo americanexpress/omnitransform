@@ -34,6 +34,12 @@ import scala.collection.Seq;
 
 import java.io.Serializable;
 
+
+/**
+ * @author Anant Athale @anant.athale@aexp.com
+ *
+ */
+
 public class OutputProcessor implements Transformable, Serializable {
 
 	private static Logger logger = LogManager.getLogger(OutputProcessor.class);

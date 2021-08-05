@@ -38,7 +38,7 @@ import com.americanexpress.omnitransform.util.Transformable;
 import com.americanexpress.omnitransform.util.TransformationConfig;
 
 /**
- * @author Anant Athale
+ * @author Anant Athale @anant.athale@aexp.com
  *
  */
 

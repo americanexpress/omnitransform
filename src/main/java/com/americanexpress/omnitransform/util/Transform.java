@@ -26,6 +26,12 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
+
+/**
+ * @author Anant Athale @anant.athale@aexp.com
+ *
+ */
+
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({ "id", "dependentIds", "transformCondition", "dropColumns", "processor" })
 public class Transform implements Configurable {

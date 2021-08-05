@@ -25,6 +25,11 @@ import org.apache.spark.sql.SparkSession;
 import com.americanexpress.omnitransform.exceptions.OmniTransformConstants;
 import com.americanexpress.omnitransform.exceptions.OmniTransformException;
 
+/**
+ * @author Anant Athale @anant.athale@aexp.com
+ *
+ */
+
 public class JsonFileParser implements Parser {
 
 	@Override

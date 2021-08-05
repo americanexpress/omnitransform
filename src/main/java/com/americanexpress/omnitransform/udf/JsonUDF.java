@@ -31,6 +31,11 @@ import com.google.gson.JsonObject;
 import scala.collection.JavaConversions;
 import scala.collection.mutable.WrappedArray;
 
+/**
+ * @author Anant Athale @anant.athale@aexp.com
+ *
+ */
+
 public class JsonUDF implements OmniTransformUDF {
 	
 

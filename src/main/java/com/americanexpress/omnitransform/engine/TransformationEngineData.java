@@ -22,6 +22,11 @@ import java.util.List;
 import com.americanexpress.omnitransform.util.Configurable;
 import com.americanexpress.omnitransform.util.TransformationConfig;
 
+/**
+ * @author Anant Athale @anant.athale@aexp.com
+ *
+ */
+
 public class TransformationEngineData {
 	public TransformationContext transformationContext;
 	public List<Configurable> activeList;

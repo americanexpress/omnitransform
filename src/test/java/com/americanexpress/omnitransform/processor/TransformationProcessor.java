@@ -30,6 +30,11 @@ import com.americanexpress.omnitransform.util.Transferrable;
 import com.americanexpress.omnitransform.util.Transform;
 import com.americanexpress.omnitransform.util.Transformable;
 
+/**
+ * @author Anant Athale @anant.athale@aexp.com
+ *
+ */
+
 public class TransformationProcessor implements Transformable {
 
 	private static Logger logger = LogManager.getLogger(TransformationProcessor.class);

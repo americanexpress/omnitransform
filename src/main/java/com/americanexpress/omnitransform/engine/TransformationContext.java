@@ -41,7 +41,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonSyntaxException;
 
 /**
- * @author Anant Athale
+ * @author Anant Athale @anant.athale@aexp.com
  *
  */
 public final class TransformationContext {

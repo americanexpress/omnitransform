@@ -22,6 +22,12 @@ import org.apache.spark.sql.Dataset;
 
 import com.americanexpress.omnitransform.exceptions.OmniTransformException;
 
+
+/**
+ * @author Anant Athale @anant.athale@aexp.com
+ *
+ */
+
 public interface Parser {
 
 	public HashMap<String, Dataset> parse(Input input) throws OmniTransformException;

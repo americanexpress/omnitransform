@@ -35,6 +35,12 @@ import com.americanexpress.omnitransform.util.InputTransferObject;
 import com.americanexpress.omnitransform.util.Transferrable;
 import com.americanexpress.omnitransform.util.Transformable;
 
+
+/**
+ * @author Anant Athale @anant.athale@aexp.com
+ *
+ */
+
 public class InputProcessor implements Transformable {
 
 	private static Logger logger = LogManager.getLogger(InputProcessor.class);

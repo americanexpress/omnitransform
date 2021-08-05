@@ -25,6 +25,10 @@ import org.junit.Test;
 
 import com.americanexpress.omnitransform.exceptions.OmniTransformException;
 
+/**
+ * @author Anant Athale @anant.athale@aexp.com
+ *
+ */
 
 public class OmniTransformExceptionTest {
 

@@ -23,6 +23,11 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.sql.SQLException;
 
+/**
+ * @author Anant Athale @anant.athale@aexp.com
+ *
+ */
+
 public class OmniTransformException extends Exception {
 	
 	private String sourceFile;

@@ -16,6 +16,11 @@
 
 package com.americanexpress.omnitransform.exceptions;
 
+/**
+ * @author Anant Athale @anant.athale@aexp.com
+ *
+ */
+
 public interface OmniTransformConstants {
 	
 	public static final String ONET01 = "JSLException";

@@ -25,6 +25,12 @@ import org.apache.spark.sql.SparkSession;
 import com.americanexpress.omnitransform.exceptions.OmniTransformConstants;
 import com.americanexpress.omnitransform.exceptions.OmniTransformException;
 
+
+/**
+ * @author Anant Athale @anant.athale@aexp.com
+ *
+ */
+
 public class ParquetFileParser implements Parser{
 
 	public HashMap<String, Dataset> parse(Input input) throws OmniTransformException {

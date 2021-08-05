@@ -34,6 +34,11 @@ import com.americanexpress.omnitransform.exceptions.OmniTransformException;
 import com.americanexpress.omnitransform.util.Input;
 import com.americanexpress.omnitransform.util.ParquetFileParser;
 
+/**
+ * @author Anant Athale @anant.athale@aexp.com
+ *
+ */
+
 public class ParquetFileParserTest {
 
 	private TransformationEngine engine;

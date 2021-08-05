@@ -18,6 +18,12 @@ package com.americanexpress.omnitransform.util;
 
 import org.apache.spark.sql.UDFRegistration;
 
+
+/**
+ * @author Anant Athale @anant.athale@aexp.com
+ *
+ */
+
 public interface OmniTransformUDF {
 
 	void registerUDF(UDFRegistration catalog);

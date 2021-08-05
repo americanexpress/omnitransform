@@ -24,6 +24,11 @@ import org.apache.spark.sql.SparkSession;
 import com.americanexpress.omnitransform.exceptions.OmniTransformConstants;
 import com.americanexpress.omnitransform.exceptions.OmniTransformException;
 
+/**
+ * @author Anant Athale @anant.athale@aexp.com
+ *
+ */
+
 public class TransformConfigHandler {
 
 	public static void handleConfig(Map<String, Object> props, SparkSession session) throws OmniTransformException {

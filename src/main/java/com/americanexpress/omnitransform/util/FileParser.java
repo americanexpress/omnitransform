@@ -59,7 +59,7 @@ import com.americanexpress.omnitransform.exceptions.OmniTransformConstants;
 import com.americanexpress.omnitransform.exceptions.OmniTransformException;
 
 /**
- * @author Anant Athale
+ * @author Anant Athale @anant.athale@aexp.com
  *
  */
 

@@ -17,7 +17,7 @@
 package com.americanexpress.omnitransform.util;
 
 /**
- * @author Anant Athale
+ * @author Anant Athale @anant.athale@aexp.com
  *
  */
 
